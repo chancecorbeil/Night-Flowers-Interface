@@ -1,0 +1,101 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Night Flowers Interface</title>
+  <meta name="description" content="Night Flowers Interface">
+  <meta name="author" content="Chance Ci">
+
+  <script src="/node_modules/osc/dist/osc-browser.js"></script>
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="stylesheet" href="css/bootstrap-grid.css">
+
+</head>
+
+<body id="body">
+
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col">
+                <div class="buttonsection">
+                    <span class="label2">Palette</span>
+                    <a href="#" class="Button3 itworks" onclick="playpalette()">Play Palette</a>
+                    <a href="#" class="Button3 itworks" onclick="stoppalette1of2();stoppalette2of2();">Stop Palette</a><br/>
+                    <a href="#" class="Button3 itworks" onclick="playpalette1();">Play Palette 1</a>
+                    <a href="#" class="Button3 itworks" onclick="playpalette2();">Play Palette 2</a>
+                    <a href="#" class="Button3 itworks" onclick="playpalette3();">Play Palette 3</a><br/>
+                    <a href="#" class="Button3 itdoesntwork" onclick="freezepalette1of2();freezepalette2of2();">Freeze Palette</a>
+                    <a href="#" class="Button3 itworks" onclick="fazethroughpalette1of2();fazethroughpalette2of2();">Faze Through Palette</a><br/>
+                    <a href="#" class="Button3 itworks" onclick="nextpalette();">Next Palette</a>
+                    <a href="#" class="Button3 itworks" onclick="previouspalette1of2();previouspalette2of2();">Previous Palette</a>
+                </div>
+
+                <div class="buttonsection">
+                    <span class="label2">Stripes</span>
+                    <a href="#" class="Button3 itworks" onclick="playstripes()">Play Stripes</a>
+                    <a href="#" class="Button3 itworks" onclick="stopstripes1of2();stopstripes2of2();">Stop Stripes</a><br/>
+                    <a href="#" class="Button3 itworks" onclick="playstripe1();">Play Stripes 1</a>
+                    <a href="#" class="Button3 itworks" onclick="playstripe2();">Play Stripes 2</a>
+                    <a href="#" class="Button3 itworks" onclick="playstripe3();">Play Stripes 3</a><br/>
+                    <a href="#" class="Button3 itworks" onclick="nextstripe();">Next Stripes</a>
+                    <a href="#" class="Button3 itworks" onclick="previousstripe1of2();previousstripe2of2();">Previous Stripes</a>
+                </div>
+
+                <div class="buttonsection">
+                    <span class="label2">Switch from Stripes and Palettes</span>
+                    <a href="#" class="Button3 itworks" onclick="stoppalette1of2();stoppalette2of2();playstripes();">Switch from Palette to Stripes</a>
+                    <a href="#" class="Button3 itworks" onclick="stopstripes1of2();stopstripes2of2();playpalette();">Switch from Stripes to Palette</a>
+                </div>
+
+                <div class="buttonsection">
+                    <span class="label2">Weather</span>
+                    <a href="#" class="Button3 itworks" onclick="WeatherLightning();">Lightning</a>
+                    <a href="#" class="Button3 untested" onclick="XXXXXX()">Snow</a>
+                    <a href="#" class="Button3 untested" onclick="XXXXXX()">Rain</a>
+                </div>
+
+                <div class="buttonsection">
+                    <span class="label2">Rainbows</span>
+                    <a href="#" class="Button3 itworks" onclick="Rainbow1();">Rainbow 1</a>
+                    <a href="#" class="Button3 itworks" onclick="Rainbow2();">Rainbow 2</a>
+                    <a href="#" class="Button3 itworks" onclick="Rainbow3();">Rainbow 3</a>
+                </div>
+
+                <div class="buttonsection">
+                    <span class="label2">Interface Effects</span>
+                    <a href="#" class="Button3 itworks" onclick="backgroundfade1()">Change background color 1</a>
+                    <a href="#" class="Button3 itworks" onclick="backgroundfade2()">Change background color 2</a>
+                    <a href="#" class="Button3 itworks" onclick="backgroundfade3()">Change background color 3</a>
+                </div>
+
+                <div class="buttonsection">
+                  <span class="label2">Pages</span>
+                  <a class="Button3 itworks"href="list.html">List</a>
+                  <a class="Button3 itworks"href="example-buttons.html">Buttons List</a>
+                  <a class="Button3 itworks"href="example-svg-1.html">Example: SVG</a>
+                  <a class="Button3 itworks"href="example-interface-circle-menu.html">Example: Circle Menu</a>
+                  <a class="Button3 itworks"href="example-menu-2.html">Example: Menu 2</a>
+              </div>
+            </div>
+            <div class="col">
+            </div>
+          </div>
+     </div>
+
+
+
+
+
+
+<script src="js/functions.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

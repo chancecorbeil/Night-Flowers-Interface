@@ -1,0 +1,87 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Night Flowers Interface</title>
+  <meta name="description" content="Night Flowers Interface">
+  <meta name="author" content="Chance Ci">
+
+  <script src="/node_modules/osc/dist/osc-browser.js"></script>
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="stylesheet" href="css/bootstrap-grid.css">
+
+</head>
+
+<body id="body">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="Button1">
+                    <div class="inner-circle" onclick="playpalette()">  
+                    </div>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <span class="label1">Play Palette</span>
+
+                  <div class="Button1">
+                    <div class="inner-circle" onclick="stoppalette1of2();stoppalette2of2();">  
+                    </div>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <span class="label1">Stop Palette</span>
+
+                  <div class="Button1" onclick="testbundle1();">
+                    <div class="inner-circle">  
+                    </div>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  testbundle1 - Broken
+
+                  <div class="Button1" onclick="testbundle2()">
+                    <div class="inner-circle">  
+                    </div>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  testbundle2 - Broken
+
+            </div>
+            <div class="col">
+                
+            </div>
+            <div class="col">
+
+                  <input id="trigger" type="checkbox" hidden>
+                  <label class="trigger" for="trigger"></label>
+                  <div class="dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                  </div>
+
+
+            </div>
+          </div>
+     </div>
+
+
+
+
+
+     
+
+
+
+
+<script src="js/functions.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
