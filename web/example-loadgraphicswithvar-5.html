@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head id="head">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/functions-load-images.js"></script>
+    <script type="text/javascript" src="js/colors.js"></script>
+    <script type="text/javascript" src="js/animations.js"></script>
+    <meta charset="utf-8">
+    <title>Night Flowers Interface</title>
+    <meta name="description" content="Night Flowers Interface">
+    <meta name="author" content="Chance Ci">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192x192.png"> <!-- favicom -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <script src="/node_modules/osc/dist/osc-browser.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/anime.min.js"></script> <!-- animations api -->
+    <script type="text/javascript" src="js/granim.js"></script> <!-- background gradient animations -->
+    <script type="text/javascript" src="js/velocity.min.js"></script>
+</head>
+<body id="body">
+    
+
+<style>
+    svg {
+        width: 100px;
+        height: 100px;
+    }
+</style>
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            
+            <h2>Autoload colors for SVGs</h2><br/><br/>
+            
+            <h2>Black and White Flower Set</h2>
+            <div class="row" id="flowerset1">
+            </div>
+
+        </div>
+
+
+    </div>
+ </div>
+
+ <br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+<script>
+
+
+    
+
+
+// Counts to 10 and loads graphics - Black and White Flower Set
+var text = "";
+var i = 1;
+while (i < 7) {
+text += "<div class='col-2'><div class='svgflower" + i + "-1' style='width:160px; height:160px;'></div></div>";
+i++;
+}
+document.getElementById("flowerset1").innerHTML = text;
+
+
+
+
+function myFunction1() {
+
+String.prototype.replaceAll = function (find, replace) {
+var str = this;
+return str.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
+};
+
+colorswapstring = document.getElementById("svgflower2-1").innerHTML;
+colorswapstring = colorswapstring.replaceAll(colorswapA, colorswapA_LiEfStripes1).replaceAll(colorswapB, colorswapB_LiEfStripes1).replaceAll(colorswapC, colorswapC_LiEfStripes1);
+document.getElementById("svgflower2-1").innerHTML = colorswapstring;
+
+
+String.prototype.replaceAll = function (find, replace) {
+var str = this;
+return str.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
+};
+
+colorswapstring = document.getElementById("svgflower3-1").innerHTML;
+colorswapstring = colorswapstring.replaceAll(colorswapA, colorswapA_LiEfStripes2).replaceAll(colorswapB, colorswapB_LiEfStripes2).replaceAll(colorswapC, colorswapC_LiEfStripes2);
+document.getElementById("svgflower3-1").innerHTML = colorswapstring;
+
+
+String.prototype.replaceAll = function (find, replace) {
+var str = this;
+return str.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
+};
+
+colorswapstring = document.getElementById("svgflower4-1").innerHTML;
+colorswapstring = colorswapstring.replaceAll(colorswapA, colorswapA_LiEfStripes3).replaceAll(colorswapB, colorswapB_LiEfStripes3).replaceAll(colorswapC, colorswapC_LiEfStripes3);
+document.getElementById("svgflower4-1").innerHTML = colorswapstring;
+
+
+String.prototype.replaceAll = function (find, replace) {
+var str = this;
+return str.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
+};
+
+colorswapstring = document.getElementById("svgflower5-1").innerHTML;
+colorswapstring = colorswapstring.replaceAll(colorswapA, colorswapA_LiEfStripes4).replaceAll(colorswapB, colorswapB_LiEfStripes4).replaceAll(colorswapC, colorswapC_LiEfStripes4);
+document.getElementById("svgflower5-1").innerHTML = colorswapstring;
+
+
+String.prototype.replaceAll = function (find, replace) {
+var str = this;
+return str.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
+};
+
+colorswapstring = document.getElementById("svgflower6-1").innerHTML;
+colorswapstring = colorswapstring.replaceAll(colorswapA, colorswapA_LiEfStripes5).replaceAll(colorswapB, colorswapB_LiEfStripes5).replaceAll(colorswapC, colorswapC_LiEfStripes5);
+document.getElementById("svgflower6-1").innerHTML = colorswapstring;
+
+}
+setTimeout("myFunction1()", 1150);
+
+
+function myFunction2() {
+
+// Remove onclick attribute
+document.getElementById('svgflower1-1').removeAttribute("onclick");
+// Change onclick event
+document.getElementById('svgflower1-1').setAttribute( "onclick", "LiEfStripes1();" );
+
+// Remove onclick attribute
+document.getElementById('svgflower2-1').removeAttribute("onclick");
+// Change onclick event
+document.getElementById('svgflower2-1').setAttribute( "onclick", "LiEfStripes2();" );
+
+// Remove onclick attribute
+document.getElementById('svgflower3-1').removeAttribute("onclick");
+// Change onclick event
+document.getElementById('svgflower3-1').setAttribute( "onclick", "LiEfStripes3();" );
+
+// Remove onclick attribute
+document.getElementById('svgflower4-1').removeAttribute("onclick");
+// Change onclick event
+document.getElementById('svgflower4-1').setAttribute( "onclick", "LiEfStripes4();" );
+
+// Remove onclick attribute
+document.getElementById('svgflower5-1').removeAttribute("onclick");
+// Change onclick event
+document.getElementById('svgflower5-1').setAttribute( "onclick", "LiEfStripes5();" );
+
+// Remove onclick attribute
+document.getElementById('svgflower6-1').removeAttribute("onclick");
+// Change onclick event
+document.getElementById('svgflower6-1').setAttribute( "onclick", "LiEfStripes6();" );
+
+}
+setTimeout("myFunction2()", 1000);
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+ 
+
+
+<p>Next</p>
+
+<p>Fade between colors when loading new colors</p>
+
+<p>Figure out how to fade between color sets in any order</p>
+
+<p>update the code with better names</p>
+
+
+
+
+
+</body>
+</html>

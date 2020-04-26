@@ -1,18 +1,18 @@
 <!doctype html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-
-  <title>Night Flowers Interface</title>
-  <meta name="description" content="Night Flowers Interface">
-  <meta name="author" content="Chance Ci">
-
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
-  <link rel="stylesheet" href="css/bootstrap-grid.css">
-  
-
+<head id="head">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <meta charset="utf-8">
+    <title>Night Flowers Interface</title>
+    <meta name="description" content="Night Flowers Interface">
+    <meta name="author" content="Chance Ci">
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <script src="/node_modules/osc/dist/osc-browser.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/granim.js"></script>
 </head>
 
 <body id="body">
@@ -28,12 +28,12 @@
 
     <div class="svgexamplewrap">
     <div id="svgflower-1" class="svgexample"></div>
-     SVG with a link
+    <span class="label1">SVG with a link</span>
     </div>
 
     <div class="svgexamplewrap">
      <div id="svgflower-2" class="svgexample"></div>
-     SVG with many colors
+     <span class="label1">SVG with many colors</span>
     </div>
 
     <div class="svgexamplewrap">
@@ -73,7 +73,7 @@
     c2.6,35.9,33.2,54,43.5,50.1c6.8-2.6,13.8-18.5,11.2-37.2c16.7,7.7,33.4,6,38,0.4c6.9-8.6-0.9-43.3-34.2-56.8
     c-12.1-4.9-22.6-10.6-31.4-15.3c10.4,1.5,23.3,3.1,37.4,6.5C193.2,104.3,219.9,80.9,219.3,69.8z"/>
     </svg>
-    SVG with animated colors
+    <span class="label1">SVG with animated colors</span>
     </div>
 
     <div class="svgexamplewrap">
@@ -115,7 +115,7 @@
     c2.6,35.9,33.2,54,43.5,50.1c6.8-2.6,13.8-18.5,11.2-37.2c16.7,7.7,33.4,6,38,0.4c6.9-8.6-0.9-43.3-34.2-56.8
     c-12.1-4.9-22.6-10.6-31.4-15.3c10.4,1.5,23.3,3.1,37.4,6.5C193.2,104.3,219.9,80.9,219.3,69.8z"/>
     </svg>
-    Rotating SVG
+    <span class="label1">Rotating SVG</span>
     </div>  
 
     <div class="svgexamplewrap">
@@ -157,15 +157,26 @@
         c2.6,35.9,33.2,54,43.5,50.1c6.8-2.6,13.8-18.5,11.2-37.2c16.7,7.7,33.4,6,38,0.4c6.9-8.6-0.9-43.3-34.2-56.8
         c-12.1-4.9-22.6-10.6-31.4-15.3c10.4,1.5,23.3,3.1,37.4,6.5C193.2,104.3,219.9,80.9,219.3,69.8z"/>
         </svg>
-        Rotating on hover
-        </div>  
+        <span class="label1">Rotating on hover</span>
+    </div>  
 
-    <div class="svgexamplewrap">
-    <div id="svgflower-3" class="svgexample"></div>
-    Hover effects - coming soon
+    <div class="svgexamplewrap svgflowertest1wrap">
+        <div id="svgflowertest1-B" class="svgexample svgflowertest1"></div>
+        <div id="svgflowertest1-A" class="svgexample svgflowertest1"></div>
+        <span class="label3">Click to change SVG graphic - flowertest1</span>
     </div>
 
-    
+    <div class="svgexamplewrap svgflowertest1wrap">
+        <div id="svgflowertest2-B" class="svgexample svgflowertest2"></div>
+        <div id="svgflowertest2-A" class="svgexample svgflowertest2"></div>
+        <span class="label3">Fade between 2 graphics - flowertest2</span>
+    </div> 
+
+    <div class="svgexamplewrap svgflowertest1wrap">
+        <div id="svgflowertest3-B" class="svgexample svgflowertest3"></div>
+        <div id="svgflowertest3-A" class="svgexample svgflowertest3"></div>
+        <span class="label3">Fade between 2 graphics - flowertest3</span>
+    </div> 
 
 
 
@@ -175,11 +186,6 @@
           </div>
      </div>
 
-
-
-
-
-
-
+     <script type="text/javascript" src="js/footerfunctions.js"></script>
 </body>
 </html>

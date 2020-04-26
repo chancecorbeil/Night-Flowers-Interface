@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head id="head">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> <!-- jquery -->
+    <script type="text/javascript" src="js/functions.js"></script> <!-- general functions -->
+    <script type="text/javascript" src="js/functions-load-images.js"></script> <!-- Loads images -->
+    <script type="text/javascript" src="js/colors.js"></script> <!-- colors -->
+
+    <meta charset="utf-8">
+    <title>Night Flowers Interface</title>
+    <meta name="description" content="Night Flowers Interface">
+    <meta name="author" content="Chance Ci">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192x192.png"> <!-- favicon -->
+    <link rel="stylesheet" href="css/styles.css?v=1.0"> <!-- css -->
+    <link rel="stylesheet" href="css/bootstrap-grid.css"> <!-- bootstrap css -->
+    <script src="/node_modules/osc/dist/osc-browser.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script> <!-- bootstrap -->
+    <script type="text/javascript" src="js/anime.min.js"></script> <!-- animations api -->
+    <script type="text/javascript" src="js/granim.js"></script> <!-- background gradient animations -->
+    <script type="text/javascript" src="js/velocity.min.js"></script> <!-- velocity - might not be used -->
+</head>
+<body id="body">
+
+<style>
+    .animate-setx-container {
+
+}
+
+.animate-setx-container .animate-setx {
+  width: 100px;
+  height: 100px;
+}
+
+.animate-setx-container .large.animate-setx {
+  width: 200px;
+  height: 200px;
+  margin-top: -90px;
+}
+
+.circlemenux {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: absolute;
+}
+.circlemenux .circlemenuxbutton {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  margin-left: -60px;
+  margin-top: -60px;
+}
+.circlemenux .circlemenuxbutton:nth-child(1) {
+  transform: rotate(0deg) translate(250px);
+}
+.circlemenux .circlemenuxbutton:nth-child(2) {
+  transform: rotate(40deg) translate(250px);
+}
+.circlemenux .circlemenuxbutton:nth-child(3) {
+  transform: rotate(80deg) translate(250px);
+}
+.circlemenux .circlemenuxbutton:nth-child(4) {
+  transform: rotate(120deg) translate(250px);
+}
+.circlemenux .circlemenuxbutton:nth-child(5) {
+  transform: rotate(160deg) translate(250px);
+}
+.circlemenux .circlemenuxbutton:nth-child(6) {
+  transform: rotate(200deg) translate(250px);
+}
+.circlemenux .circlemenuxbutton:nth-child(7) {
+  transform: rotate(240deg) translate(250px);
+}
+.circlemenux .circlemenuxbutton:nth-child(8) {
+  transform: rotate(280deg) translate(250px);
+}
+.circlemenux .circlemenuxbutton:nth-child(9) {
+  transform: rotate(320deg) translate(250px);
+}
+
+.circlemenux .circlemenuxbuttoncenter {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border-radius: 50%;
+  margin-left: 100px;
+  margin-top: 100px;
+-webkit-animation: circlemenuxbuttoncenter 20s infinite linear;
+}
+@-webkit-keyframes circlemenuxbuttoncenter {
+  from {
+          -webkit-transform: rotate(0deg);
+  }
+  to {
+          -webkit-transform: rotate(359deg);
+  }
+}
+
+</style>
+
+
+
+
+        <div class="circlemenux animate-setx-container ring1">
+            <div class="circlemenuxbutton"><div class="flowerxcontainer"><div class="flowerx flowerx1 svgfloweranimate1-1"></div></div></div> 
+            <div class="circlemenuxbutton"><div class="flowerxcontainer"><div class="flowerx flowerx2 svgfloweranimate2-1"></div></div></div> 
+            <div class="circlemenuxbutton"><div class="flowerxcontainer"><div class="flowerx flowerx3 svgfloweranimate3-1"></div></div></div> 
+            <div class="circlemenuxbutton"><div class="flowerxcontainer"><div class="flowerx flowerx4 svgfloweranimate4-1"></div></div></div> 
+            <div class="circlemenuxbutton"><div class="flowerxcontainer"><div class="flowerx flowerx5 svgfloweranimate5-1"></div></div></div> 
+            <div class="circlemenuxbutton"><div class="flowerxcontainer"><div class="flowerx flowerx6 svgfloweranimate1-1"></div></div></div> 
+            <div class="circlemenuxbutton"><div class="flowerxcontainer"><div class="flowerx flowerx7 svgfloweranimate2-1"></div></div></div> 
+            <div class="circlemenuxbutton"><div class="flowerxcontainer"><div class="flowerx flowerx8 svgfloweranimate3-1"></div></div></div> 
+            <div class="circlemenuxbutton"><div class="flowerxcontainer"><div class="flowerx flowerx9 svgfloweranimate4-1"></div></div></div> 
+        </div>
+
+
+<script>
+
+
+// Animate Set x
+
+
+
+function animateX1() {
+  anime({
+    targets: '.ring1 .flowerxcontainer',
+    translateX: function() {
+      return anime.random(-100, 270);
+    },
+    easing: 'easeInOutQuad',
+    duration: 750,
+    complete: animateX1
+  });
+}
+animateX1();
+
+function animateX2() {
+  anime({
+    targets: '.ring1 .flowerx',
+    direction: 'alternate',
+    loop: true,
+    scale: {
+    value: 2,
+    duration: 1600,
+    delay: 800,
+    easing: 'easeInOutQuart'
+    },
+    complete: animateX2
+  });
+}
+animateX2();
+
+
+
+anime({
+  targets: '.ring2 .flowerx',
+  translateX: 30,
+  direction: 'alternate',
+  loop: true,
+  rotate: {
+    value: '1turn',
+    duration: 3000,
+    easing: 'easeInOutSine',
+  },
+  scale: {
+    value:1.3,
+    duration: 1600,
+    delay: 800,
+    easing: 'easeInOutQuart'
+  },
+});
+
+anime({
+  targets: '.ring2',
+  rotate: {
+    value: '1turn',
+    duration: 4000,
+    easing: 'easeInOutSine',
+  },
+  scale: {
+    value: .5,
+    duration: 3000,
+    delay: 800,
+    easing: 'easeInOutQuart'
+  },
+});
+
+
+
+
+
+    function colortheflowers() {
+
+String.prototype.replaceAll = function (find, replace) {
+var str = this;
+return str.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
+};
+
+colorswapstring = document.getElementById("svgfloweranimate1-1").innerHTML;
+colorswapstring = colorswapstring.replaceAll(colorswapA, colorswapA_LiEfStripes1).replaceAll(colorswapB, colorswapB_LiEfStripes1).replaceAll(colorswapC, colorswapC_LiEfStripes1);
+document.getElementById("svgfloweranimate1-1").innerHTML = colorswapstring;
+
+String.prototype.replaceAll = function (find, replace) {
+var str = this;
+return str.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
+};
+
+colorswapstring = document.getElementById("svgfloweranimate2-1").innerHTML;
+colorswapstring = colorswapstring.replaceAll(colorswapA, colorswapA_LiEfStripes2).replaceAll(colorswapB, colorswapB_LiEfStripes2).replaceAll(colorswapC, colorswapC_LiEfStripes2);
+document.getElementById("svgfloweranimate2-1").innerHTML = colorswapstring;
+
+
+String.prototype.replaceAll = function (find, replace) {
+var str = this;
+return str.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
+};
+
+colorswapstring = document.getElementById("svgfloweranimate3-1").innerHTML;
+colorswapstring = colorswapstring.replaceAll(colorswapA, colorswapA_LiEfStripes3).replaceAll(colorswapB, colorswapB_LiEfStripes3).replaceAll(colorswapC, colorswapC_LiEfStripes3);
+document.getElementById("svgfloweranimate3-1").innerHTML = colorswapstring;
+
+
+String.prototype.replaceAll = function (find, replace) {
+var str = this;
+return str.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
+};
+
+colorswapstring = document.getElementById("svgfloweranimate4-1").innerHTML;
+colorswapstring = colorswapstring.replaceAll(colorswapA, colorswapA_LiEfStripes4).replaceAll(colorswapB, colorswapB_LiEfStripes4).replaceAll(colorswapC, colorswapC_LiEfStripes4);
+document.getElementById("svgfloweranimate4-1").innerHTML = colorswapstring;
+
+
+String.prototype.replaceAll = function (find, replace) {
+var str = this;
+return str.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
+};
+
+colorswapstring = document.getElementById("svgfloweranimate5-1").innerHTML;
+colorswapstring = colorswapstring.replaceAll(colorswapA, colorswapA_LiEfStripes5).replaceAll(colorswapB, colorswapB_LiEfStripes5).replaceAll(colorswapC, colorswapC_LiEfStripes5);
+document.getElementById("svgfloweranimate5-1").innerHTML = colorswapstring;
+
+
+String.prototype.replaceAll = function (find, replace) {
+var str = this;
+return str.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
+};
+
+colorswapstring = document.getElementById("svgfloweranimate6-1").innerHTML;
+colorswapstring = colorswapstring.replaceAll(colorswapA, colorswapA_LiEfStripes6).replaceAll(colorswapB, colorswapB_LiEfStripes6).replaceAll(colorswapC, colorswapC_LiEfStripes6);
+document.getElementById("svgfloweranimate6-1").innerHTML = colorswapstring;
+
+}
+setTimeout("colortheflowers()", 1150);
+
+</script>       
+
+    <script type="text/javascript" src="js/osc-messages.js"></script> <!-- OSC Messages - Loads after the contents -->
+    <script type="text/javascript" src="js/footerfunctions.js"></script> <!-- Granim Animations -->
+</body>
+</html>

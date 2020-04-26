@@ -1,0 +1,102 @@
+<!doctype html>
+
+<html lang="en">
+<head id="head">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <script src="/node_modules/osc/dist/osc-browser.js"></script>
+
+    <meta charset="utf-8">
+    <title>Night Flowers Interface</title>
+    <meta name="description" content="Night Flowers Interface">
+    <meta name="author" content="Chance Ci">
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/granim.js"></script>
+</head>
+
+<body id="body">
+
+    <style> 
+        body .cta-wrapper {
+            margin-top: 130px;
+        }
+        
+        body .cta-wrapper a {
+            position: relative;
+            z-index: 1;
+        }
+        
+    </style>
+
+        <canvas id="canvas-interactive"></canvas>
+        <div class="cta-wrapper">
+            <a href="#default-state" id="default-state-cta" class="active">Default state</a>
+            <a href="#violet-state" id="violet-state-cta">Violet state</a>
+            <a href="#orange-state" class="orange-state-cta">Orange state</a>
+        </div>
+
+    <script> 
+    
+    var granimInstance = new Granim({
+    element: '#canvas-interactive',
+    name: 'interactive-gradient',
+    elToSetClassOn: 'body',
+    direction: 'diagonal',
+    isPausedWhenNotInView: true,
+    stateTransitionSpeed: 500,
+    states : {
+        "default-state": {
+            gradients: [
+                ['#B3FFAB', '#12FFF7'],
+                ['#ADD100', '#7B920A'],
+                ['#1A2980', '#26D0CE']
+            ],
+            transitionSpeed: 10000
+        },
+        "violet-state": {
+            gradients: [
+                ['#9D50BB', '#6E48AA'],
+                ['#4776E6', '#8E54E9']
+            ],
+            transitionSpeed: 2000
+        },
+        "orange-state": {
+            gradients: [ ['#FF4E50', '#F9D423'] ],
+            loop: false
+        }
+    }
+});
+
+// With jQuery
+$('#default-state-cta').on('click', function(event) {
+    event.preventDefault();
+    granimInstance.changeState('default-state');
+    setClass('#default-state-cta')
+});
+$('#violet-state-cta').on('click', function(event) {
+    event.preventDefault();
+    granimInstance.changeState('violet-state');
+    setClass('#violet-state-cta')
+});
+$('.orange-state-cta').on('click', function(event) {
+    event.preventDefault();
+    granimInstance.changeState('orange-state');
+    setClass('.orange-state-cta')
+});
+$('.backgroundfade1').on('click', function(event) {
+    event.preventDefault();
+    granimInstance.changeState('orange-state');
+    setClass('.backgroundfade1')
+});
+
+function setClass(element) {
+    $('body a').removeClass('active');
+    $(element).addClass('active');
+};
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head id="head">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/functions-load-images.js"></script>
+    <script type="text/javascript" src="js/animations.js"></script>
+    <meta charset="utf-8">
+    <title>Night Flowers Interface</title>
+    <meta name="description" content="Night Flowers Interface">
+    <meta name="author" content="Chance Ci">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192x192.png"> <!-- favicom -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <script src="/node_modules/osc/dist/osc-browser.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/anime.min.js"></script> <!-- animations api -->
+    <script type="text/javascript" src="js/granim.js"></script> <!-- background gradient animations -->
+    <script type="text/javascript" src="js/velocity.min.js"></script>
+</head>
+<body id="body">
+
+    <style>
+    
+    * {
+	margin: 0;
+	padding: 0;
+}
+
+.animateditem {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50px;
+	height: 50px;
+}
+</style>
+
+
+
+
+<div class="animateditem svgflower-1"></div>
+<div class="animateditem svgflower-2"></div>
+<div class="animateditem svgflower-3"></div>
+<div class="animateditem svgflower-4"></div>
+<div class="animateditem svgflower-5"></div>
+<div class="animateditem svgflower-6"></div>
+<div class="animateditem svgflower-7"></div>
+<div class="animateditem svgflower-8"></div>
+<div class="animateditem svgflower-9"></div>
+<div class="animateditem svgflower-10"></div>
+
+
+
+
+
+<script>
+    function randomValues() {
+  anime({
+    targets: '.animateditem',
+    translateX: function() {
+      return anime.random(-700, 700);
+    },
+		translateY: function() {
+      return anime.random(-300, 300);
+    },
+		rotate: function() {
+			return anime.random(0, 360);
+		},
+		scale: function() {
+			return anime.random(1, 3);
+		},
+    duration: 2000,
+    complete: randomValues,
+	});
+}
+
+randomValues();
+
+</script>
+
+
+
+
+     <script type="text/javascript" src="js/footerfunctions.js"></script>
+</body>
+</html>

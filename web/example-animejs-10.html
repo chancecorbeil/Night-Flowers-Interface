@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head id="head">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/functions-load-images.js"></script>
+    <script type="text/javascript" src="js/animations.js"></script>
+    <meta charset="utf-8">
+    <title>Night Flowers Interface</title>
+    <meta name="description" content="Night Flowers Interface">
+    <meta name="author" content="Chance Ci">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192x192.png"> <!-- favicom -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <script src="/node_modules/osc/dist/osc-browser.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/anime.min.js"></script> <!-- animations api -->
+    <script type="text/javascript" src="js/granim.js"></script> <!-- background gradient animations -->
+    <script type="text/javascript" src="js/velocity.min.js"></script>
+</head>
+<body id="body">
+
+    <style>
+
+.container {
+}        
+
+.rodbox {
+  position: relative;
+  left: 300px;
+  top: -400px;
+}
+
+#rod {
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 150px;
+  width: 2px;
+  height: 450px;
+  border-radius: 5px;
+  transform-origin: 50% 0%;
+  transform: rotate(60deg);
+  top: 0;
+}
+
+#rod2 {
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 150px;
+  width: 2px;
+  height: 450px;
+  border-radius: 5px;
+  transform-origin: 50% 0%;
+  transform: rotate(60deg);
+  top: 0;
+}
+
+.ball {
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.ball2 {
+  position: absolute;
+  bottom: 20%;
+  left: -50px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.ball3 {
+  position: absolute;
+  bottom: 48%;
+  left: -50px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+    </style>
+
+<div class="container">
+  <div class="row">
+    <div class="column">
+      <div class="rodbox">
+
+        <div id="rod">
+            <div id="pivot"></div>
+            <div class="ball svgflower-31"></div>
+            <div class="ball2 svgflower-31"></div>
+            <div class="ball3 svgflower-31"></div>
+        </div>
+
+        <div id="rod2">
+            <div id="pivot2"></div>
+            <div class="ball svgflower-31"></div>
+            <div class="ball2 svgflower-31"></div>
+            <div class="ball3 svgflower-31"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+let animation1 = anime({
+  targets: '#rod',
+  rotate: [60, -60],
+  duration: 3000,
+  easing: 'easeInOutSine',
+  direction: 'alternate',
+  loop: true
+});   
+
+let animation2 = anime({
+  targets: '#rod2',
+  rotate: [-60, 60],
+  duration: 3000,
+  easing: 'easeInOutSine',
+  direction: 'alternate',
+  loop: true
+});   
+
+
+    </script>
+
+
+
+     <script type="text/javascript" src="js/footerfunctions.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head id="head">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> <!-- jquery -->
+    <script type="text/javascript" src="js/functions.js"></script> <!-- general functions -->
+    <script type="text/javascript" src="js/functions-load-images.js"></script> <!-- Loads images -->
+    <script type="text/javascript" src="js/colors.js"></script> <!-- colors -->
+    <script type="text/javascript" src="js/animations.js"></script> <!-- animations -->
+    <meta charset="utf-8">
+    <title>Night Flowers Interface</title>
+    <meta name="description" content="Night Flowers Interface">
+    <meta name="author" content="Chance Ci">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192x192.png"> <!-- favicon -->
+    <link rel="stylesheet" href="css/styles.css?v=1.0"> <!-- css -->
+    <link rel="stylesheet" href="css/bootstrap-grid.css"> <!-- bootstrap css -->
+    <script src="/node_modules/osc/dist/osc-browser.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script> <!-- bootstrap -->
+    <script type="text/javascript" src="js/anime.min.js"></script> <!-- animations api -->
+    <script type="text/javascript" src="js/granim.js"></script> <!-- background gradient animations -->
+    <script type="text/javascript" src="js/velocity.min.js"></script> <!-- velocity - might not be used -->
+</head>
+<body id="body">
+    
+
+<style>
+    svg {
+        width: 300px;
+        height: 300px;
+    }
+</style>
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="svgflower3-1" id="flowerhere1"></div>
+
+            <div class="onclicker" id="onclicker" onclick="playpalette();">Onclicker</div>
+        </div>
+      </div>
+ </div>
+
+<p><strong>Function: 5 for onclicker</strong> </p>
+
+<button onclick="myFunction5()">Try it</button>
+<br/>
+
+<p><strong>Function: 1</strong> Remove and adds new onclick attribute</p>
+
+<button onclick="myFunction1()">Try it</button>
+<br/>
+
+<p><strong>Function: 2</strong> shape 1</p>
+
+<button onclick="myFunction2()">Try it</button>
+<br/>
+
+
+<p><strong>Function: 3</strong> shape 1</p>
+
+<button onclick="myFunction3()">Try it</button>
+<br/>
+
+
+<p><strong>Function: 4</strong> shape 1</p>
+
+<button onclick="myFunction4()">Try it</button>
+<br/>
+
+
+
+
+
+
+<script>
+
+
+    
+      // Load svg graphic
+      $(function(){
+            $(".flowerhere1").load("/images/svgflower6-1.html"); 
+        });
+
+        $(function(){
+            $(".flowerhere2").load("/images/svgflower2-1.html"); 
+        });
+
+
+function myFunction1() {
+
+// Remove onclick attribute
+document.getElementById('svgflower3-1').removeAttribute("onclick");
+
+// Change onclick event
+document.getElementById('svgflower3-1').setAttribute( "onclick", "nextpalette();" );
+
+}
+
+function myFunction5() {
+
+// Remove onclick attribute
+document.getElementById('onclicker').removeAttribute("onclick");
+
+// Change onclick event
+document.getElementById('onclicker').setAttribute( "onclick", "nextpalette();" );
+
+
+}
+
+
+
+function myFunction2() {
+
+String.prototype.replaceAll = function (find, replace) {
+var str = this;
+return str.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
+};
+
+colorswapstring = document.getElementById("flowerhere1").innerHTML;
+colorswapstring = colorswapstring.replaceAll(colorswapA0, colorswapA1).replaceAll(colorswapB0, colorswapB1).replaceAll(colorswapC0, colorswapC1);
+document.getElementById("flowerhere1").innerHTML = colorswapstring;
+
+}
+
+
+function myFunction3() {
+
+    String.prototype.replaceAll = function (find, replace) {
+    var str = this;
+    return str.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
+    };
+
+colorswapstring = document.getElementById("flowerhere1").innerHTML;
+colorswapstring = colorswapstring.replaceAll(colorswapA1, colorswapA2).replaceAll(colorswapB1, colorswapB2).replaceAll(colorswapC1, colorswapC2);
+document.getElementById("flowerhere1").innerHTML = colorswapstring;
+
+}
+
+
+function myFunction4() {
+
+String.prototype.replaceAll = function (find, replace) {
+var str = this;
+return str.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
+};
+
+colorswapstring = document.getElementById("flowerhere1").innerHTML;
+colorswapstring = colorswapstring.replaceAll(colorswapA2, colorswapA3).replaceAll(colorswapB2, colorswapB3).replaceAll(colorswapC2, colorswapC3);
+document.getElementById("flowerhere1").innerHTML = colorswapstring;
+
+}
+
+</script>
+
+
+ 
+
+
+<p>Next</p>
+
+<p>Fade between colors when loading new colors</p>
+
+<p>Figure out how to fade between color sets in any order</p>
+
+<p>update the code with better names</p>
+
+
+
+
+
+<script type="text/javascript" src="js/osc-messages.js"></script> <!-- OSC Messages - Loads after the contents -->
+</body>
+</html>

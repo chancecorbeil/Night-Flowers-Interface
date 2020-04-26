@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head id="head">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> <!-- jquery -->
+    <script type="text/javascript" src="js/functions.js"></script> <!-- general functions -->
+    <script type="text/javascript" src="js/functions-load-images.js"></script> <!-- Loads images -->
+    <script type="text/javascript" src="js/colors.js"></script> <!-- colors -->
+    <script type="text/javascript" src="js/animations.js"></script> <!-- animations -->
+    <meta charset="utf-8">
+    <title>Night Flowers Interface</title>
+    <meta name="description" content="Night Flowers Interface">
+    <meta name="author" content="Chance Ci">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192x192.png"> <!-- favicon -->
+    <link rel="stylesheet" href="css/styles.css?v=1.0"> <!-- css -->
+    <link rel="stylesheet" href="css/bootstrap-grid.css"> <!-- bootstrap css -->
+    <script src="/node_modules/osc/dist/osc-browser.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script> <!-- bootstrap -->
+    <script type="text/javascript" src="js/anime.min.js"></script> <!-- animations api -->
+    <script type="text/javascript" src="js/granim.js"></script> <!-- background gradient animations -->
+    <script type="text/javascript" src="js/velocity.min.js"></script> <!-- velocity - might not be used -->
+</head>
+<body id="body">
+    
+
+<style>
+    svg {
+        width: 300px;
+        height: 300px;
+    }
+</style>
+
+<div class="flowerhere" id="flowerhere"></div>
+
+
+<p><strong>Function: 1</strong> Remove and adds new onclick attribute</p>
+
+<button onclick="myFunction1()">Try it</button>
+<br/>
+
+
+
+
+<script>
+      // Load svg graphic
+        $(function(){
+            $(".flowerhere").load("/images/svgflower1-1.html"); 
+        });
+
+
+function myFunction1() {
+
+// Remove onclick attribute
+document.getElementById('svg').removeAttribute("onclick");
+
+// Change onclick event
+document.getElementById('svg').setAttribute( "onclick", "LiEfStripes2();" );
+
+}
+
+
+</script>
+
+
+
+
+<script>
+    let color1A = '111111';
+    let color2A = '222222';
+    let color3A = '333333';
+    let color1B = '39B54A';
+    let color2B = '29ABE2';
+    let color3B = 'FCEE21';
+    let color1C = 'EE367A';
+    let color2C = '8C59B1';
+    let color3C = '008080';
+  </script>
+  
+
+  
+
+  <p><strong>Function: 2</strong> Click the button to replace "color1A, color2A, color3A" with "color1B, color2B, color3B".</p>
+
+<button onclick="myFunction2()">Try it</button>
+<br/>
+
+
+<script>
+function myFunction2() {
+
+    String.prototype.replaceAll = function (find, replace) {
+    var str3 = this;
+    return str3.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
+    };
+
+string3 = document.getElementById("body").innerHTML;
+string3 = string3.replaceAll(color1A, color1B).replaceAll(color2A, color2B).replaceAll(color3A, color3B);
+document.getElementById("body").innerHTML = string3;
+
+}
+</script>
+
+
+
+
+
+<p><strong>Function: 3</strong> Click the button to replace "color1B, color2B, color3B" with "color1C, color2C, color3C".</p>
+
+<button onclick="myFunction3()">Try it</button>
+<br/>
+
+<script>
+function myFunction3() {
+
+    String.prototype.replaceAll = function (find, replace) {
+    var str3 = this;
+    return str3.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
+    };
+
+string3 = document.getElementById("body").innerHTML;
+string3 = string3.replaceAll(color1B, color1C).replaceAll(color2B, color2C).replaceAll(color3B, color3C);
+document.getElementById("body").innerHTML = string3;
+
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>File names</p>
+
+svgflower1-1.html
+svgflower1-2.html
+svgflower1-3.html
+svgflower2-1.html
+svgflower2-2.html
+svgfloweranimate1-3.html
+svgfloweranimate1-3.html
+
+Animate in name or no?
+
+
+
+<p><strong>Next</strong></p>
+
+<p><strong>Next</strong> Fade between colors</p>
+
+
+
+
+
+<script type="text/javascript" src="js/osc-messages.js"></script> <!-- OSC Messages - Loads after the contents -->
+</body>
+</html>

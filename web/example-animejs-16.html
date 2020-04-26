@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head id="head">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> <!-- jquery -->
+    <script type="text/javascript" src="js/functions.js"></script> <!-- general functions -->
+    <script type="text/javascript" src="js/functions-load-images.js"></script> <!-- Loads images -->
+    <script type="text/javascript" src="js/colors.js"></script> <!-- colors -->
+
+    <meta charset="utf-8">
+    <title>Night Flowers Interface</title>
+    <meta name="description" content="Night Flowers Interface">
+    <meta name="author" content="Chance Ci">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192x192.png"> <!-- favicon -->
+    <link rel="stylesheet" href="css/styles.css?v=1.0"> <!-- css -->
+    <link rel="stylesheet" href="css/bootstrap-grid.css"> <!-- bootstrap css -->
+    <script src="/node_modules/osc/dist/osc-browser.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script> <!-- bootstrap -->
+    <script type="text/javascript" src="js/anime.min.js"></script> <!-- animations api -->
+    <script type="text/javascript" src="js/granim.js"></script> <!-- background gradient animations -->
+    <script type="text/javascript" src="js/velocity.min.js"></script> <!-- velocity - might not be used -->
+</head>
+<body id="body">
+
+<style>
+    .animate-setx-container {
+
+}
+
+.animate-setx-container .animate-setx {
+  width: 100px;
+  height: 100px;
+}
+
+.animate-setx-container .large.animate-setx {
+  width: 200px;
+  height: 200px;
+  margin-top: -90px;
+}
+
+</style>
+
+
+        <div class="animate-setx-container">
+            <svg class="animate-setx flowerx1 svgfloweranimate1-1" viewBox="0 0 96 96">
+                <polygon points="48 17.28 86.4 80.11584 9.6 80.11584"/>
+            </svg>
+            <div class="animate-setx flowerx2 svgfloweranimate2-1" viewBox="0 0 96 96"></div>
+            <div class="animate-setx flowerx3 svgfloweranimate3-1" viewBox="0 0 96 96"></div>
+            <div class="animate-setx flowerx4 svgfloweranimate4-1" viewBox="0 0 96 96"></div>
+            <div class="animate-setx flowerx5 svgfloweranimate5-1" viewBox="0 0 96 96"></div>
+            <div class="animate-setx flowerx6 svgfloweranimate6-1" viewBox="0 0 96 96"></div>
+        </div>
+
+<script>
+// Animations
+
+// Animate Set x
+
+anime({
+  targets: '.flowerx2, .flowerx4, .flowerx6',
+  keyframes: [
+    {translateY: -40},
+    {translateX: 250},
+    {translateY: 40},
+    {translateX: 0},
+    {translateY: 0}
+  ],
+  duration: 4000,
+  easing: 'easeOutElastic(1, .8)',
+  loop: true
+});
+
+
+
+// Colors
+    function colortheflowers() {
+
+String.prototype.replaceAll = function (find, replace) {
+var str = this;
+return str.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
+};
+
+colorswapstring = document.getElementById("svgfloweranimate1-1").innerHTML;
+colorswapstring = colorswapstring.replaceAll(colorswapA, colorswapA_LiEfStripes1).replaceAll(colorswapB, colorswapB_LiEfStripes1).replaceAll(colorswapC, colorswapC_LiEfStripes1);
+document.getElementById("svgfloweranimate1-1").innerHTML = colorswapstring;
+
+String.prototype.replaceAll = function (find, replace) {
+var str = this;
+return str.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
+};
+
+colorswapstring = document.getElementById("svgfloweranimate2-1").innerHTML;
+colorswapstring = colorswapstring.replaceAll(colorswapA, colorswapA_LiEfStripes2).replaceAll(colorswapB, colorswapB_LiEfStripes2).replaceAll(colorswapC, colorswapC_LiEfStripes2);
+document.getElementById("svgfloweranimate2-1").innerHTML = colorswapstring;
+
+
+String.prototype.replaceAll = function (find, replace) {
+var str = this;
+return str.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
+};
+
+colorswapstring = document.getElementById("svgfloweranimate3-1").innerHTML;
+colorswapstring = colorswapstring.replaceAll(colorswapA, colorswapA_LiEfStripes3).replaceAll(colorswapB, colorswapB_LiEfStripes3).replaceAll(colorswapC, colorswapC_LiEfStripes3);
+document.getElementById("svgfloweranimate3-1").innerHTML = colorswapstring;
+
+
+String.prototype.replaceAll = function (find, replace) {
+var str = this;
+return str.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
+};
+
+colorswapstring = document.getElementById("svgfloweranimate4-1").innerHTML;
+colorswapstring = colorswapstring.replaceAll(colorswapA, colorswapA_LiEfStripes4).replaceAll(colorswapB, colorswapB_LiEfStripes4).replaceAll(colorswapC, colorswapC_LiEfStripes4);
+document.getElementById("svgfloweranimate4-1").innerHTML = colorswapstring;
+
+
+String.prototype.replaceAll = function (find, replace) {
+var str = this;
+return str.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
+};
+
+colorswapstring = document.getElementById("svgfloweranimate5-1").innerHTML;
+colorswapstring = colorswapstring.replaceAll(colorswapA, colorswapA_LiEfStripes5).replaceAll(colorswapB, colorswapB_LiEfStripes5).replaceAll(colorswapC, colorswapC_LiEfStripes5);
+document.getElementById("svgfloweranimate5-1").innerHTML = colorswapstring;
+
+
+String.prototype.replaceAll = function (find, replace) {
+var str = this;
+return str.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
+};
+
+colorswapstring = document.getElementById("svgfloweranimate6-1").innerHTML;
+colorswapstring = colorswapstring.replaceAll(colorswapA, colorswapA_LiEfStripes6).replaceAll(colorswapB, colorswapB_LiEfStripes6).replaceAll(colorswapC, colorswapC_LiEfStripes6);
+document.getElementById("svgfloweranimate6-1").innerHTML = colorswapstring;
+
+}
+setTimeout("colortheflowers()", 1150);
+
+
+
+
+
+
+
+
+
+</script>       
+
+    <script type="text/javascript" src="js/osc-messages.js"></script> <!-- OSC Messages - Loads after the contents -->
+    <script type="text/javascript" src="js/footerfunctions.js"></script> <!-- Granim Animations -->
+</body>
+</html>
