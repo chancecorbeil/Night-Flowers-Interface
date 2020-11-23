@@ -5,7 +5,7 @@
 $(document).ready(function(){
 
 // Load at website launch
-  $(".interface-1").load("list.html").stop().hide().fadeIn(1500); 
+  $(".interface-1").load("introduction.html").stop().hide().fadeIn(1500); 
 
 // Interface sidebars
   $("#sidebarnavigation").load("sidebarnavigation-1.html"); 
@@ -22,10 +22,13 @@ $(document).ready(function(){
 
 
   // Load Interfaces
+  
   function loadinterface1(){ 
     $(".interface").stop().fadeOut(500); 
     $(".interface-1").load("list.html").stop().hide().fadeIn(1600); 
   }   
+
+
   function loadinterface2(){ 
     $(".interface").stop().fadeOut(500); 
     $(".interface-2").load("example-interface-2.html").stop().hide().fadeIn(1600); 

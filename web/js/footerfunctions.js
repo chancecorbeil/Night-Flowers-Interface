@@ -12,7 +12,7 @@ var granimInstance = new Granim({
     stateTransitionSpeed: 500,
     states : {
         "default-state": {
-            gradients: [ ['#FF4E50', '#F9D423'] ],
+            gradients: [ ['#FF4E50', '#000000'] ],
             loop: false
         },
         "granim-bgcolors-1": {
