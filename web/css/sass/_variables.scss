@@ -1,0 +1,115 @@
+// These are the custom variables
+
+// WRITE TABLE OF CONTENTS
+
+// Colors
+$darkblue: #36475D;
+$lightblue: #34AFC8;
+$salmon: #F36F57;
+$teal: #00a388;
+$brown: #5a372b;
+$lightyellow: #fadcaa;
+$lightorange: #ffc09f;
+$lightorange-invert: #777777;
+$orange: #ff8c61;
+
+$purple1: #8c5b97;
+$purple1lightest: #D3BBD8;
+$purple1ldarkest: #200C24;
+$purple2: #6d597a;
+$purple3: #ada7c9;
+$purple4: #6d597a;
+$purple5: #8e7dbe;
+$purple6: #794c74;
+$pink1: #c56183;
+$pink2: #b56576;
+$pink3: #f4cae0;
+
+$colorset1a: #355070;
+$colorset1b: #6d597a;
+$colorset1c: #b56576;
+$colorset1d: #e56b6f;
+$colorset1e: #eaac8b;
+
+// Set the derived variables
+$primary: $purple1;
+$primary-invert: $white;
+
+// Setup your Custom Colors
+$secondary: $pink1;
+$secondary-invert: $white;
+$accent: $salmon;
+$accent-invert: $white;
+
+$linkedin: #0077b5;
+$linkedin-invert: findColorInvert($linkedin);
+$twitter: #55acee;
+$twitter-invert: findColorInvert($twitter);
+$github: #333;
+$github-invert: findColorInvert($github);
+
+// Add new color variables to the color map.
+@import "../sass/bulma/sass/utilities/derived-variables";
+$addColors: ("secondary":($secondary, $secondary-invert),
+"lightorange":($lightorange, $lightorange-invert),
+"accent":($accent, $accent-invert),
+"purple1lightest":($purple1lightest, $white),
+"purple1ldarkest":($purple1ldarkest, $white-ter),
+"twitter":($twitter, $twitter-invert),
+	"linkedin": ($linkedin, $linkedin-invert),
+	"github": ($github, $github-invert));
+$colors: map-merge($colors, $addColors);
+
+
+// Google Fonts
+
+// Karla
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+// Quattrocento
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap');
+// Cormorant Garamond
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+// Cardo
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
+// Spectral
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,700;0,800;1,400;1,500&display=swap');
+// Halant
+@import url('https://fonts.googleapis.com/css2?family=Halant:wght@400;600;700&display=swap');
+// Libre Baskerville
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+
+// Sass Variables
+
+$family-1: 'Lora', serif;
+$family-2: 'Roboto', sans-serif;
+$family-3: 'Playfair Display', serif;
+$family-4: 'Source Sans Pro', sans-serif;
+$family-5: 'Montserrat', sans-serif;
+$family-6: 'Karla', sans-serif;
+$family-7: 'Quattrocento', serif;
+$family-8: 'Cormorant Garamond', serif;
+$family-9: 'Cardo', serif;
+$family-10: 'Spectral', serif;
+$family-11: 'Halant', serif;
+$family-12: 'Libre Baskerville', serif;
+$family-13: 'xxxxxxxxx', serif;
+
+$family-primary: $family-11;
+$family-secondary: $family-6;
+
+$family-serif: 'Montserrat',
+sans-serif;
+
+
+
+$background: $white-ter;
+
+$text: #4a4a4a;
+$link: $primary;
+$body-size: 20px;
+$body-line-height: 1.666;
+$section-padding: 65px 35px;
+$desktop: 1138px+(2 * $gap);
+$widescreen: 1138px+(2 * $gap);
+$fullhd: 1138px+(2 * $gap);
