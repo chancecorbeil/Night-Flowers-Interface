@@ -1,0 +1,663 @@
+<!doctype html>
+
+<html lang="en">
+<head id="head">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/osc-messages.js"></script>
+    <script type="text/javascript" src="js/animations.js"></script>
+    <meta charset="utf-8">
+    <title>Night Flowers Interface</title>
+    <meta name="description" content="Night Flowers Interface">
+    <meta name="author" content="Chance Ci">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=1.0">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <script src="/node_modules/osc/dist/osc-browser.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/granim.js"></script>
+    <script type="text/javascript" src="js/velocity.min.js"></script>
+</head>
+<body id="body">
+
+        
+
+
+    <section class="section">
+        <div class="container">
+
+            <div class="columns is-variable">
+
+                <div class="column is-12 maincontentarea">
+
+                <div class="buttonsection">
+                    <span class="label2">Palette</span>
+                    <a href="#" class="Button3 itworks" onclick="playpalette()">Play Palette</a>
+                    <a href="#" class="Button3 itworks" onclick="stoppalette1of2();stoppalette2of2();">Stop Palette</a><br/>
+                    <a href="#" class="Button3 itworks" onclick="playpalette1();">Play Palette 1</a>
+                    <a href="#" class="Button3 itworks" onclick="playpalette2();">Play Palette 2</a>
+                    <a href="#" class="Button3 itworks" onclick="playpalette3();">Play Palette 3</a><br/>
+                    <a href="#" class="Button3 itdoesntwork" onclick="freezepalette1of2();freezepalette2of2();">Freeze Palette</a>
+                    <a href="#" class="Button3 itworks" onclick="fazethroughpalette1of2();fazethroughpalette2of2();">Faze Through Palette</a><br/>
+                    <a href="#" class="Button3 itworks" onclick="nextpalette();">Next Palette</a>
+                    <a href="#" class="Button3 itworks" onclick="previouspalette1of2();previouspalette2of2();">Previous Palette</a>
+                </div>
+
+                <div class="buttonsection">
+                    <span class="label2">Stripes</span>
+                    <a href="#" class="Button3 itworks" onclick="playstripes()">Play Stripes</a>
+                    <a href="#" class="Button3 itworks" onclick="stopstripes1of2();stopstripes2of2();">Stop Stripes</a><br/>
+                    <a href="#" class="Button3 itworks" onclick="playstripe1();">Play Stripes 1</a>
+                    <a href="#" class="Button3 itworks" onclick="playstripe2();">Play Stripes 2</a>
+                    <a href="#" class="Button3 itworks" onclick="playstripe3();">Play Stripes 3</a><br/>
+                    <a href="#" class="Button3 itworks" onclick="nextstripe();">Next Stripes</a>
+                    <a href="#" class="Button3 itworks" onclick="previousstripe1of2();previousstripe2of2();">Previous Stripes</a>
+                </div>
+
+                <div class="buttonsection">
+                    <span class="label2">Switch from Stripes and Palettes</span>
+                    <a href="#" class="Button3 itworks" onclick="stoppalette1of2();stoppalette2of2();playstripes();">Switch from Palette to Stripes</a>
+                    <a href="#" class="Button3 itworks" onclick="stopstripes1of2();stopstripes2of2();playpalette();">Switch from Stripes to Palette</a>
+                </div>
+
+                <div class="buttonsection">
+                    <span class="label2">Weather</span>
+                    <a href="#" class="Button3 itworks" onclick="WeatherLightning();">Lightning</a>
+                    <a href="#" class="Button3 untested" onclick="XXXXXX()">Snow</a>
+                    <a href="#" class="Button3 untested" onclick="XXXXXX()">Rain</a>
+                </div>
+
+                <div class="buttonsection">
+                    <span class="label2">Rainbows</span>
+                    <a href="#" class="Button3 itworks" onclick="Rainbow1();">Rainbow 1</a>
+                    <a href="#" class="Button3 itworks" onclick="Rainbow2();">Rainbow 2</a>
+                    <a href="#" class="Button3 itworks" onclick="Rainbow3();">Rainbow 3</a>
+                </div>
+
+                <div class="buttonsection">
+                    <span class="label2">Interface Effects</span>
+                    <a href="#" class="Button3 itworks bgcolors-1" onclick="bgcolors-1()">Change background color 1</a>
+                    <a href="#" class="Button3 itworks bgcolors-2" onclick="bgcolors-2()">Change background color 2</a>
+                    <a href="#" class="Button3 itworks bgcolors-3" onclick="bgcolors-3()">Change background color 3</a>
+                    <a href="#" class="Button3 itworks bgcolors-4" onclick="bgcolors-4()">Change background color 4</a>
+                    <a href="#" class="Button3 itworks bgcolors-5" onclick="bgcolors-5()">Change background color 5</a>
+                    <a href="#" class="Button3 itworks bgcolors-6" onclick="bgcolors-6()">Change background color 6</a>
+                    <a href="#" class="Button3 itworks bgcolors-7" onclick="bgcolors-7()">Change background color 7</a>
+                    <a href="#" class="Button3 itworks bgcolors-8" onclick="bgcolors-8()">Change background color 8</a>
+                    <a href="#" class="Button3 itworks bgcolors-9" onclick="bgcolors-9()">Change background color 9</a>
+                    <a href="#" class="Button3 itworks bgcolors-10" onclick="bgcolors-10()">Change background color 10</a>
+                    <a href="#" class="Button3 itworks bgcolors-11" onclick="bgcolors-11()">Change background color 11</a>
+                    <a href="#" class="Button3 itworks bgcolors-12" onclick="bgcolors-12()">Change background color 12</a>
+                    <a href="#" class="Button3 itworks bgcolors-13" onclick="bgcolors-13()">Change background color 13</a>
+                    <a href="#" class="Button3 itworks bgcolors-14" onclick="bgcolors-14()">Change background color 14</a>
+                    <a href="#" class="Button3 itworks bgcolors-15" onclick="bgcolors-15()">Change background color 15</a>
+
+                </div>
+
+                <div class="buttonsection">
+                  <span class="label2">Pages</span>
+                  <a class="Button3 itworks"href="list.html">List</a>
+                  <a class="Button3 itworks"href="buttons.html">Buttons List</a>
+                  <a class="Button3 itworks"href="svg-1.html">Example: SVG</a>
+                  <a class="Button3 itworks"href="svg-2.html">Example: SVG 2</a>
+                  <a class="Button3 itworks"href="interface-circle-menu.html">Example: Circle Menu</a>
+                  <a class="Button3 itworks"href="interface-circle-menu-2.html">Example: Circle Menu 2</a>
+                  <a class="Button3 itworks"href="menu-2.html">Example: Menu 2</a>
+              </div>
+           
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<script>
+
+// OSC Messages
+
+// Websocket Stuff
+var isReady = false
+var oscPort = new osc.WebSocketPort({
+   url: "ws://localhost:8081", // URL to your Web Socket server.
+   metadata: true
+});
+oscPort.open();
+oscPort.on("message", function (oscMsg) {
+   console.log("An OSC message just arrived!", oscMsg);
+});
+
+// For most Ports, send() should only be called after the "ready" event fires.
+oscPort.on("ready", function () {
+   isReady = true
+});
+
+// The original function by the hired programmer
+function originalbyprogrammer() {
+   if(isReady) {
+       console.log("Sending message!")
+       oscPort.send({
+       address: "/composition/layers/1/video/opacity",
+       args: [
+           {
+               type: "f",
+               value: 0.25
+           }
+       ]
+   });
+   }
+}
+
+function function2() {
+   if(isReady) {
+       console.log("Sending message!")
+       oscPort.send({
+       address: "/composition/layers/2/clips/1/connect",
+       args: [
+           {
+               type: "f",
+               value: 0.25
+           }
+       ]
+   });
+   }
+}
+
+// Palette Functions
+
+function playpalette() {
+   if(isReady) {
+       console.log("Sending message!")
+       oscPort.send({
+       address: "/composition/layers/2/clips/1/connect",
+       args: [
+           {
+               type: "f",
+               value: 1
+           }
+       ]
+   });
+   }
+}
+
+function playpalette1() {
+   if(isReady) {
+       console.log("Sending message!")
+       oscPort.send({
+       address: "/composition/layers/2/clips/1/connect",
+       args: [
+           {
+               type: "f",
+               value: 1
+           }
+       ]
+   });
+   }
+}
+
+function playpalette2() {
+   if(isReady) {
+       console.log("Sending message!")
+       oscPort.send({
+       address: "/composition/layers/2/clips/2/connect",
+       args: [
+           {
+               type: "f",
+               value: 1
+           }
+       ]
+   });
+   }
+}
+
+function playpalette3() {
+   if(isReady) {
+       console.log("Sending message!")
+       oscPort.send({
+       address: "/composition/layers/2/clips/3/connect",
+       args: [
+           {
+               type: "f",
+               value: 1
+           }
+       ]
+   });
+   }
+}
+
+function stoppalette1of2() {
+   if(isReady) {
+       console.log("Sending message!")
+       oscPort.send({
+       address: "/composition/layers/2/clear",
+       args: [
+           {
+               type: "f",
+               value: 1
+           }
+       ]
+   });
+   }
+}
+
+function stoppalette2of2() {
+   if(isReady) {
+       console.log("Sending message!")
+       oscPort.send({
+       address: "/composition/layers/2/clear",
+       args: [
+           {
+               type: "f",
+               value: 0,
+               DelayNode: 10
+           }
+       ]
+   });
+   }
+}
+
+function freezepalette1of2() {
+   if(isReady) {
+       console.log("Sending message!")
+       oscPort.send({
+       address: "/composition/selectedclip/video/source/gradient/color1/behaviour/playdirection",
+       args: [
+           {
+               type: "f",
+               value: 1
+           }
+       ]
+   });
+   }
+}
+
+function freezepalette2of2() {
+  if(isReady) {
+      console.log("Sending message!")
+      oscPort.send({
+      address: "/composition/selectedclip/video/source/gradient/color2/behaviour/playdirection",
+      args: [
+          {
+              type: "f",
+              value: 1
+          }
+      ]
+  });
+  }
+}
+
+
+function fazethroughpalette1of2() {
+   if(isReady) {
+       console.log("Sending message!")
+       oscPort.send({
+       address: "/composition/selectedclip/video/source/gradient/color1/behaviour/playdirection",
+       args: [
+           {
+               type: "f",
+               value: 2
+           }
+       ]
+   });
+   }
+}
+
+function fazethroughpalette2of2() {
+  if(isReady) {
+      console.log("Sending message!")
+      oscPort.send({
+      address: "/composition/selectedclip/video/source/gradient/color2/behaviour/playdirection",
+      args: [
+          {
+              type: "f",
+              value: 2
+          }
+      ]
+  });
+  }
+}
+
+function nextpalette() {
+   if(isReady) {
+       console.log("Sending message!")
+       oscPort.send({
+       address: "/composition/layers/2/connectnextclip",
+       args: [
+           {
+               type: "f",
+               value: 1
+           }
+       ]
+   });
+   }
+}
+
+function previouspalette1of2() {
+   if(isReady) {
+       console.log("Sending message!")
+       oscPort.send({
+       address: "/composition/layers/2/connectprevclip",
+       args: [
+           {
+               type: "f",
+               value: 1
+           }
+       ]
+   });
+   }
+}
+
+function previouspalette2of2() {
+   if(isReady) {
+       console.log("Sending message!")
+       oscPort.send({
+       address: "/composition/layers/2/connectprevclip",
+       args: [
+           {
+               type: "f",
+               value: 1
+           }
+       ]
+   });
+   }
+}
+
+// Stripes Functions
+
+function playstripes() {
+   if(isReady) {
+       console.log("Sending message!")
+       oscPort.send({
+       address: "/composition/layers/3/clips/1/connect",
+       args: [
+           {
+               type: "f",
+               value: 1
+           }
+       ]
+   });
+   }
+}
+
+function stopstripes1of2() {
+   if(isReady) {
+       console.log("Sending message!")
+       oscPort.send({
+       address: "/composition/layers/3/clear",
+       args: [
+           {
+               type: "f",
+               value: 1
+           }
+       ]
+   });
+   }
+}
+
+function stopstripes2of2() {
+   if(isReady) {
+       console.log("Sending message!")
+       oscPort.send({
+       address: "/composition/layers/3/clear",
+       args: [
+           {
+               type: "f",
+               value: 0,
+               DelayNode: 10
+           }
+       ]
+   });
+   }
+}
+
+function playstripe1() {
+   if(isReady) {
+       console.log("Sending message!")
+       oscPort.send({
+       address: "/composition/layers/3/clips/1/connect",
+       args: [
+           {
+               type: "f",
+               value: 1
+           }
+       ]
+   });
+   }
+}
+
+function playstripe2() {
+   if(isReady) {
+       console.log("Sending message!")
+       oscPort.send({
+       address: "/composition/layers/3/clips/2/connect",
+       args: [
+           {
+               type: "f",
+               value: 1
+           }
+       ]
+   });
+   }
+}
+
+function playstripe3() {
+   if(isReady) {
+       console.log("Sending message!")
+       oscPort.send({
+       address: "/composition/layers/3/clips/3/connect",
+       args: [
+           {
+               type: "f",
+               value: 1
+           }
+       ]
+   });
+   }
+}
+
+function nextstripe() {
+   if(isReady) {
+       console.log("Sending message!")
+       oscPort.send({
+       address: "/composition/layers/3/connectnextclip",
+       args: [
+           {
+               type: "f",
+               value: 1
+           }
+       ]
+   });
+   }
+}
+
+function previousstripe1of2() {
+   if(isReady) {
+       console.log("Sending message!")
+       oscPort.send({
+       address: "/composition/layers/3/connectprevclip",
+       args: [
+           {
+               type: "f",
+               value: 1
+           }
+       ]
+   });
+   }
+}
+
+function previousstripe2of2() {
+   if(isReady) {
+       console.log("Sending message!")
+       oscPort.send({
+       address: "/composition/layers/3/connectprevclip",
+       args: [
+           {
+               type: "f",
+               value: 1
+           }
+       ]
+   });
+   }
+}
+
+
+// Rainbow Functions
+
+function Rainbow1() {
+   if(isReady) {
+       console.log("Sending message!")
+       oscPort.send({
+       address: "/composition/layers/4/clips/1/connect",
+       args: [
+           {
+               type: "f",
+               value: 1
+           }
+       ]
+   });
+   }
+}
+
+function Rainbow2() {
+   if(isReady) {
+       console.log("Sending message!")
+       oscPort.send({
+       address: "/composition/layers/4/clips/2/connect",
+       args: [
+           {
+               type: "f",
+               value: 1
+           }
+       ]
+   });
+   }
+}
+
+function Rainbow3() {
+   if(isReady) {
+       console.log("Sending message!")
+       oscPort.send({
+       address: "/composition/layers/4/clips/3/connect",
+       args: [
+           {
+               type: "f",
+               value: 1
+           }
+       ]
+   });
+   }
+}
+
+// Weather Functions
+
+function WeatherLightning() {
+   if(isReady) {
+       console.log("Sending message!")
+       oscPort.send({
+       address: "/composition/layers/8/clips/1/connect",
+       args: [
+           {
+               type: "f",
+               value: 1
+           }
+       ]
+   });
+   }
+}
+
+function XXXXXXXXXXX() {
+   if(isReady) {
+       console.log("Sending message!")
+       oscPort.send({
+       address: "/composition/layers/3/connectprevclip",
+       args: [
+           {
+               type: "f",
+               value: 1
+           }
+       ]
+   });
+   }
+}
+
+function XXXXXXXXXXX() {
+   if(isReady) {
+       console.log("Sending message!")
+       oscPort.send({
+       address: "/composition/layers/3/connectprevclip",
+       args: [
+           {
+               type: "f",
+               value: 1
+           }
+       ]
+   });
+   }
+}
+
+
+function testbundle1() {
+   if(isReady) {
+       console.log("Sending message!")
+       oscPort.send({
+           packets: [
+                       {
+                           address: "/composition/layers/2/clips/1/connect",
+                           args: [
+                               {
+                                   type: "f",
+                                   value: 1
+                               }
+                           ]
+                       },
+                       {
+                           address: "/composition/layers/3/clear",
+                           args: [
+                               {
+                                   type: "f",
+                                   value: 1
+                               }
+                           ]
+                       }
+                   ]
+   });
+   }
+}
+
+function testbundle1() {
+   if(isReady) {
+       console.log("Sending message!")
+       oscPort.send({
+           packets: [
+                       {
+                           address: "/composition/layers/3/clips/1/connect",
+                           args: [
+                               {
+                                   type: "f",
+                                   value: 1
+                               }
+                           ]
+                       },
+                       {
+                           address: "/composition/layers/1/clear",
+                           args: [
+                               {
+                                   type: "f",
+                                   value: 1
+                               }
+                           ]
+                       }
+                   ]
+   });
+   }
+}
+
+
+    </script>
+     
+ 
+
+     <script type="text/javascript" src="js/footerfunctions.js"></script>
+</body>
+</html>

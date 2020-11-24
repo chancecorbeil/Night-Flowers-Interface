@@ -1,0 +1,87 @@
+<!doctype html>
+
+<!-- References -->
+
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Night Flowers Interface</title>
+  <meta name="description" content="Night Flowers Interface">
+  <meta name="author" content="Chance Ci">
+
+  <script src="/node_modules/osc/dist/osc-browser.js"></script>
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <link rel="stylesheet" href="css/style.css?v=1.0">
+  <link rel="stylesheet" href="css/bootstrap-grid.css">
+
+</head>
+
+<body id="body">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+
+
+<style>
+
+
+
+.x {
+  animation: x 13s linear infinite alternate;
+  width: 100px;
+  height: 100px;
+}
+
+.y {
+  animation: y 7s linear infinite alternate;
+  width: 100px;
+  height: 100px;
+}
+
+@keyframes x {
+  100% {
+    transform: translateX( calc(100vw - #{100px}) );
+  }
+}
+
+@keyframes y {
+  100% {
+    transform: translateY( calc(100vh - #{100px}) );
+  }
+}
+
+</style>
+
+                <div class="x">
+                <img class="y" src="https://blog.codepen.io/wp-content/uploads/2012/06/Button-Black-Large.png" alt="codepen" />
+                </div>
+
+                NEEDS SCSS to work
+
+
+            </div>
+          </div>
+     </div>
+
+
+
+
+
+     <script> 
+        $(function(){
+          $(".circlemenubutton").load("/images/svgflower-3.html"); 
+        });
+
+        $(function(){
+          $(".circlemenubuttoncenter").load("/images/svgflower-3.html"); 
+        }); 
+    </script> 
+
+<script src="js/functions.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

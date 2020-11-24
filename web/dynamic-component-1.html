@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head id="head">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> <!-- jquery -->
+    <script type="text/javascript" src="js/functions.js"></script> <!-- general functions -->
+    <script type="text/javascript" src="js/functions-load-images.js"></script> <!-- Loads images -->
+    <script type="text/javascript" src="js/colors.js"></script> <!-- colors -->
+
+    <meta charset="utf-8">
+    <title>Night Flowers Interface</title>
+    <meta name="description" content="Night Flowers Interface">
+    <meta name="author" content="Chance Ci">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192x192.png"> <!-- favicon -->
+    <link rel="stylesheet" href="css/style.css?v=1.0"> <!-- css -->
+    <link rel="stylesheet" href="css/bootstrap-grid.css"> <!-- bootstrap css -->
+    <script src="/node_modules/osc/dist/osc-browser.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script> <!-- bootstrap -->
+    <script type="text/javascript" src="js/anime.min.js"></script> <!-- animations api -->
+    <script type="text/javascript" src="js/granim.js"></script> <!-- background gradient animations -->
+    <script type="text/javascript" src="js/velocity.min.js"></script> <!-- velocity - might not be used -->
+</head>
+<body id="body">
+
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-12">
+
+<h2 class="title is-2">Modal Example</h2>
+
+<p>We are going to need a solid naming system to make sure we open and close the right modals</p>
+
+
+
+<button class="button">Button</button>
+
+                    <div class="modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-content">
+                          <!-- Any other Bulma elements you want -->
+                          <p>This is a modal</p>
+                        </div>
+                        <button class="modal-close is-large" aria-label="close"></button>
+                      </div>
+
+                    
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+<p>Click the button to replace "modal" with "modal is-active" in the paragraph below:</p>
+
+<button onclick="openModal()">Try it</button>
+<br/>
+
+<script>
+function openModal() {
+  let name = 'modal';
+  let name2 = 'modal is-active';
+  var str5 = document.getElementById("body").innerHTML; 
+  var res5 = str5.replace(name, name2 );
+  document.getElementById("body").innerHTML = res5;
+}
+</script>
+
+    
+
+    
+
+
+
+
+<p id="switchtextcomponent">Click the button to replace "up" with "down" in this paragraph</p>
+
+<button onclick="switchTextFunction()">Try it</button>
+<br/>
+
+<script>
+function switchTextFunction() {
+  let name = 'up';
+  let name2 = 'down';
+  var strX = document.getElementById("switchtextcomponent").innerHTML; 
+  var resX = strX.replace(name, name2 );
+  document.getElementById("switchtextcomponent").innerHTML = resX;
+}
+</script>
+
+
+
+
+
+
+
+
+<div id="contact-form-modal" class="modal animated">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+    <!-- Any other Bulma elements you want -->
+        <div class="contact-form-container wrapper">
+          <!-- add .is-hidden to see the animation on the form success box -->
+          <div class="box box-container">
+            <p class="has-text-centered">Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem </p>
+            </div>
+            <!-- /#contactform.contact-form -->
+            <!-- add .is-active-box -->
+            <div id="form-success" class="box is-radiusless has-background-success has-text-white has-text-centered is-info" aria-hidden="true">
+                <p class="is-large">Form successfully submitted</p>
+                <!-- /.is-large -->
+            </div>
+            <!-- /#form-success.box -->
+        </div>
+        <!-- /.contact-form-container wrapper -->
+
+    </div><!-- end /.modal-content  -->
+    <button class="modal-close is-large" aria-label="close"></button>
+</div><!-- end #contact-form-modal -->
+
+<div class="box box-container">
+<p class="has-text-centered"><a id="contact-form-button" class="button is-primary" href="javascript:void(0)">Best Modal Solution</a></p>
+</div>
+
+<script>
+$(document).ready(function () {
+    $("#contact-form-button").on('click', function() {
+        $("#contact-form-modal").addClass("is-active");
+    });
+    $("#contact-form-modal button.modal-close").on('click', function() {
+        $("#contact-form-modal").addClass("slideOutUp").removeClass("is-active");
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="js/osc-messages.js"></script> <!-- OSC Messages - Loads after the contents -->
+    <script type="text/javascript" src="js/footerfunctions.js"></script> <!-- Granim Animations -->
+</body>
+</html>

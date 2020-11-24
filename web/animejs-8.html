@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head id="head">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/functions-load-images.js"></script>
+    <script type="text/javascript" src="js/animations.js"></script>
+    <meta charset="utf-8">
+    <title>Night Flowers Interface</title>
+    <meta name="description" content="Night Flowers Interface">
+    <meta name="author" content="Chance Ci">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192x192.png"> <!-- favicom -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=1.0">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <script src="/node_modules/osc/dist/osc-browser.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/anime.min.js"></script> <!-- animations api -->
+    <script type="text/javascript" src="js/granim.js"></script> <!-- background gradient animations -->
+    <script type="text/javascript" src="js/velocity.min.js"></script>
+</head>
+<body id="body">
+
+    <style>
+div {
+  position: absolute;
+  top: .5rem;
+  left: .5rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: green;
+}
+
+body {
+    width: 200px; 
+    height: 200px;
+}
+
+path {
+    border: 4px solid #ffffff;
+}
+    </style>
+
+<section>
+    <article width="256" height="256">
+      <svg width="256px" height="256px">
+    <path fill="none" stroke="#FFF" d="M1320.4,66.2l4,9.8c0.3,0.7,0.9,1.2,1.7,1.2l10.6,0.8c1.7,0.1,2.5,2.3,1.1,3.4l-8.1,6.9c-0.6,0.5-0.8,1.2-0.6,2
+	l2.5,10.3c0.4,1.7-1.4,3.1-2.9,2.1l-9-5.6c-0.6-0.4-1.4-0.4-2.1,0l-9,5.6c-1.5,0.9-3.3-0.4-2.9-2.1l2.5-10.3c0.2-0.7-0.1-1.5-0.6-2
+	l-8.1-6.9c-1.3-1.1-0.6-3.3,1.1-3.4l10.6-0.8c0.7-0.1,1.4-0.5,1.7-1.2l4-9.8C1317.5,64.6,1319.8,64.6,1320.4,66.2z"/>
+</svg>
+      </svg>
+      <div class="green"></div>
+    </article>
+    <footer>
+      <span>Made with</span> <a href="http://anime-js.com">anime.js</a>
+    </footer>
+    <a class="logo" href="http://anime-js.com"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1137/anime-logo.png"></img></a>
+  </section>
+
+
+<script>
+    // Begin wrap all functions - waits until document loads, then loads js
+$(document).ready(function(){
+
+var path = anime.path('section path');
+
+anime({
+  targets: 'section .green',
+  translateX: path('x'),
+  translateY: path('y'),
+  rotate: path('angle'),
+  easing: 'linear',
+  duration: 2000,
+  loop: true
+});
+    // End wrap all functions
+});
+    </script>
+
+
+
+     <script type="text/javascript" src="js/footerfunctions.js"></script>
+</body>
+</html>

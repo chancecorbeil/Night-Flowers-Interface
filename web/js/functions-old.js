@@ -93,25 +93,25 @@ function loadinterface1(){
   }   
   function loadinterface2(){ 
     $(".interface").stop().fadeOut(500); 
-    $(".interface-2").load("example-interface-2.html").stop().hide().fadeIn(1600); 
+    $(".interface-2").load("interface-2.html").stop().hide().fadeIn(1600); 
     $.getScript("/js/functions-load-images.js", function() {});
     $.getScript("/js/animations.js", function() {});
   } 
   function loadinterface3(){ 
     $(".interface").stop().fadeOut(500); 
-    $(".interface-3").load("example-interface-3.html").stop().hide().fadeIn(1600); 
+    $(".interface-3").load("interface-3.html").stop().hide().fadeIn(1600); 
     $.getScript("/js/functions-load-images.js", function() {});
     $.getScript("/js/animations.js", function() {});
   } 
   function loadinterface4(){ 
     $(".interface").stop().fadeOut(500); 
-    $(".interface-4").load("example-interface-4.html").stop().hide().fadeIn(1600); 
+    $(".interface-4").load("interface-4.html").stop().hide().fadeIn(1600); 
     $.getScript("/js/functions-load-images.js", function() {});
     $.getScript("/js/animations.js", function() {});
   } 
   function loadinterface5(){ 
     $(".interface").stop().fadeOut(500); 
-    $(".interface-5").load("example-interface-5.html").stop().hide().fadeIn(1600); 
+    $(".interface-5").load("interface-5.html").stop().hide().fadeIn(1600); 
     $.getScript("/js/functions-load-images.js", function() {});
     $.getScript("/js/animations.js", function() {});
   } 

@@ -1,0 +1,92 @@
+
+    <section class="section">
+      <div class="container">
+
+  <h2 class="title">Black and White Flower Set</h2>
+  <div class="columns is-multiline" id="flowerset2">
+  </div>
+
+  <h2 class="title">Black and White Animated Flower Set</h2>
+  <div class="columns is-multiline" id="flowerset3">
+  </div>
+
+  <h2 class="title">Original Flower Set - Probably won't be used anymore</h2>
+  <div class="columns is-multiline" id="flowerset1">
+  </div>
+
+</div>
+</section>
+
+
+
+
+<script>
+// Counts to 50 and loads graphics - Original Flower Set
+var text = "";
+var i = 1;
+while (i < 50) {
+text += "<div class='column is-2'><div class='svgflower-" + i + "' style='width:160px; height:160px;'></div></div>";
+i++;
+}
+document.getElementById("flowerset1").innerHTML = text;
+
+// Counts to 10 and loads graphics - Black and White Flower Set
+var text = "";
+var i = 1;
+while (i < 7) {
+text += "<div class='column is-2'><div class='svgflower" + i + "-1' style='width:160px; height:160px;'></div></div>";
+i++;
+}
+document.getElementById("flowerset2").innerHTML = text;
+
+// Counts to 10 and loads graphics - Black and White Animated Flower Set 
+var text = "";
+var i = 1;
+while (i < 7) {
+text += "<div class='column is-2'><div class='svgfloweranimate" + i + "-1' style='width:160px; height:160px;'></div></div>";
+i++;
+}
+document.getElementById("flowerset3").innerHTML = text;
+
+
+
+
+function myFunction1() {
+
+// Remove onclick attribute
+document.getElementById('svgflower1-1').removeAttribute("onclick");
+// Change onclick event
+document.getElementById('svgflower1-1').setAttribute( "onclick", "LiEfStripes1();" );
+
+// Remove onclick attribute
+document.getElementById('svgflower2-1').removeAttribute("onclick");
+// Change onclick event
+document.getElementById('svgflower2-1').setAttribute( "onclick", "LiEfStripes2();" );
+
+// Remove onclick attribute
+document.getElementById('svgflower3-1').removeAttribute("onclick");
+// Change onclick event
+document.getElementById('svgflower3-1').setAttribute( "onclick", "LiEfStripes3();" );
+
+// Remove onclick attribute
+document.getElementById('svgflower4-1').removeAttribute("onclick");
+// Change onclick event
+document.getElementById('svgflower4-1').setAttribute( "onclick", "LiEfStripes4();" );
+
+// Remove onclick attribute
+document.getElementById('svgflower5-1').removeAttribute("onclick");
+// Change onclick event
+document.getElementById('svgflower5-1').setAttribute( "onclick", "LiEfStripes5();" );
+
+// Remove onclick attribute
+document.getElementById('svgflower6-1').removeAttribute("onclick");
+// Change onclick event
+document.getElementById('svgflower6-1').setAttribute( "onclick", "LiEfStripes6();" );
+
+}
+// setTimeout("myFunction1()", 1000);
+
+
+
+
+</script>
