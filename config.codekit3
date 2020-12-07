@@ -2006,6 +2006,62 @@
 		"oAP": "/web/head.html",
 		"oF": 0
 		},
+	"/web/headerless/interface-1.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/web/headerless/interface-1.html",
+		"oF": 0
+		},
+	"/web/headerless/interface-2.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/web/headerless/interface-2.html",
+		"oF": 0
+		},
+	"/web/headerless/interface-3.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/web/headerless/interface-3.html",
+		"oF": 0
+		},
+	"/web/headerless/interface-4.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/web/headerless/interface-4.html",
+		"oF": 0
+		},
+	"/web/headerless/interface-5.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/web/headerless/interface-5.html",
+		"oF": 0
+		},
+	"/web/headerless/interface-6.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/web/headerless/interface-6.html",
+		"oF": 0
+		},
+	"/web/headerless/list.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/web/headerless/list.html",
+		"oF": 0
+		},
 	"/web/images/biggraphic-1.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -2684,54 +2740,6 @@
 		"oAP": "/web/index.html",
 		"oF": 0
 		},
-	"/web/interface-1.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/web/interface-1.html",
-		"oF": 0
-		},
-	"/web/interface-2.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/web/interface-2.html",
-		"oF": 0
-		},
-	"/web/interface-3.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/web/interface-3.html",
-		"oF": 0
-		},
-	"/web/interface-4.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/web/interface-4.html",
-		"oF": 0
-		},
-	"/web/interface-5.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/web/interface-5.html",
-		"oF": 0
-		},
-	"/web/interface-6.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/web/interface-6.html",
-		"oF": 0
-		},
 	"/web/interface-circle-menu-2.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -3070,14 +3078,6 @@
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
-		},
-	"/web/list.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/web/list.html",
-		"oF": 0
 		},
 	"/web/loadgraphicswithvar-1.html": {
 		"cB": 0,
