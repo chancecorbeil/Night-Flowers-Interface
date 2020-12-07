@@ -9,6 +9,14 @@
 	],
 "creatorBuild": "33081",
 "files": {
+	"/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.gitignore",
+		"oF": 0
+		},
 	"/index.js": {
 		"bF": 0,
 		"ft": 64,
@@ -45,6 +53,14 @@
 	"/web/animejs-1.html": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/web/animejs-1.html",
+		"oF": 0
+		},
+	"/web/animejs-1.kit": {
+		"cB": 0,
+		"ft": 2048,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/web/animejs-1.html",
@@ -1998,14 +2014,6 @@
 		"oAP": "/web/grannim.html",
 		"oF": 0
 		},
-	"/web/head.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/web/head.html",
-		"oF": 0
-		},
 	"/web/headerless/interface-1.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -2732,9 +2740,33 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/web/imports/footer.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/web/imports/footer.html",
+		"oF": 0
+		},
+	"/web/imports/header.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/web/imports/header.html",
+		"oF": 0
+		},
 	"/web/index.html": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/web/index.html",
+		"oF": 0
+		},
+	"/web/index.kit": {
+		"cB": 0,
+		"ft": 2048,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/web/index.html",
